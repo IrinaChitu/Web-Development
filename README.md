@@ -5,7 +5,7 @@
 
 Proiect realizat in anul II de facultate, 2018: **Biblioteca Online** (IBDB)
 
-**HomePage:* Pagina de prezentare
+**HomePage:** Pagina de prezentare
 
 **BibliotecaUser:** Pagina de vizualizare a celor doua baze de date (cu carti si autori). Pentru a le putea edita, trebuie introduse username-ul si parola corecta 
 
