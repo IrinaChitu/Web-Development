@@ -1,7 +1,7 @@
 # Web-Development
 ### HTML, CSS, JavaScript
 
-Proiect realizat in anul II de facultate, 2018: **Biblioteca Online** (IBDB)
+Proiect realizat in anul II de facultate, 2018: **Biblioteca Online** (IBDb)
 
 **HomePage:** Pagina de prezentare
 
