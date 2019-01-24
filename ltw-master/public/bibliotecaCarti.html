@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <link rel="stylesheet" href="css/biblioteca.css"/>
+    <script src="js/biblioteca.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+        <!-- de modificat procentaje pt poza de background -->
+
+        <!-- <nav id="navbar">
+            <a href="SF.html">Science Fiction</a>
+            &nbsp;
+            <a href="#">Fantasy</a>
+            &nbsp;
+            <a href="#">Romance</a>
+            &nbsp;
+            <a href="#">Drama</a>
+            <a href="#">Fiction</a>
+            <a href="#">Mystery</a>
+            <a href="#">Horror</a>
+            <a href="#">Short Story</a>
+            <a href="#">Article</a>
+            <a href="#">Essay</a>
+            <a href="#">Poetry</a>
+            <a href="#">Fable</a>
+            <a href="#">Children's Literature</a>
+            <a href="#">Non-fiction</a>
+            <a href="#">Biography</a>
+            <a href="#">History</a>
+            <a href="#">Philosophy</a>
+        </nav> -->
+
+        <div class="topnav">
+          <a class="active" href="#addBookHere">Add a Book</a>
+          <a href="http://localhost:3000/bibliotecaAutori.html">Add an Author</a>
+          <!-- <div class="login-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Username" name="username">
+              <input type="text" placeholder="Password" name="psw">
+              <button id="Login" type="submit">Login</button>
+            </form>
+          </div> -->
+        </div>
+
+        <div id="content">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:13%;">COVER</th>
+                <th style="width:15%;">NAME</th>
+                <th style="width:10%;">AUTHOR</th>
+                <th style="width:10%;">GENRE</th>
+                <th style="width:25%;">SUMMARY</th>
+                <th style="width:17%;">FAVORITE QUOTES</th>
+
+                <th>ADMIN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(el, id) in books">
+                <td><img v-bind:src="'../images/covers/' + el.Source"></td>
+                <td>{{el.Name}}</td>
+                <td>{{el.Author}}</td>
+                <td>{{el.Genre}}</td>
+                <td>{{el.Summary}}</td>
+                <td>{{el.FavoriteQuotes}}</td>
+                <td>
+                  <button v-on:click="editBook(id)">Edit</button>
+                  <button v-on:click="removeBook(id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+            <a id="addBookHere"></a>
+            <form id="adauga"><fieldset>
+              <legend>ADD ANOTHER BOOK:</legend>
+              <label>Name:<input v-model="inpBooks.Name"></label></br>
+              <label>Author:<input v-model="inpBooks.Author"></label></br>
+              <label>Genre:<input v-model="inpBooks.Genre"></label></br>
+              <label>Summary: <textarea v-model="inpBooks.Summary" placeholder="Resize me if you need"></textarea></label></br>
+              <label>Popular Quotes:<textarea v-model="inpBooks.FavoriteQuotes" placeholder="Resize me if you need"></textarea></label></br>
+              <label>Cover:<input type="file" accept="image/*" @change="bookImageUpload"></label></br>
+            <button v-on:click="commitBook">{{(editIdBooks===null)?"ADD":"EDIT"}}</button>
+          </fieldset></form>
+
+
+        </div>
+    </div>
+
+  </body>
+</html>

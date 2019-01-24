@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <link rel="stylesheet" href="css/bibliotecaUser.css"/>
+    <script src="js/bibliotecaUser.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+
+        <div class="topnav">
+
+          <div class="login-container">
+            <form name="logare" action="">
+              <input type="text" placeholder="Username" name="username">
+              <input type="password" placeholder="Password" name="psw">
+              <button id = "login">Login</button>
+            </form>
+          </div>
+        </div>
+
+
+        <div class ="content" id="contentAutor">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:18%;">AUTHOR</th>
+                <th style="width:40%;">BIOGRAPHY</th>
+                <th style="width:30%;">BOOKS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(el, id) in authors">
+                <td>{{el.Name}}</td>
+                <td>{{el.Biography}}</td>
+                <td>{{el.Boooks}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+
+        <div class ="content" id="contentCarte">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:13%;">COVER</th>
+                <th style="width:15%;">BOOK</th>
+                <th style="width:10%;">AUTHOR</th>
+                <th style="width:10%;">GENRE</th>
+                <th style="width:25%;">SUMMARY</th>
+                <th style="width:17%;">FAVORITE QUOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(el, id) in books">
+                <td><img v-bind:src="'../images/covers/' + el.Source"></td>
+                <td>{{el.Name}}</td>
+                <td>{{el.Author}}</td>
+                <td>{{el.Genre}}</td>
+                <td>{{el.Summary}}</td>
+                <td>{{el.FavoriteQuotes}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+
+
+        </div>
+
+    </div>
+
+  </body>
+</html>

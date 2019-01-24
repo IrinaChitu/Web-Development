@@ -1,0 +1,195 @@
+body, html, #main {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+/* SCROLL frumi */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("../images/desktop1.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("../images/desktop2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("../images/desktop3.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.border {
+  background-color:transparent;
+  font-size:25px;
+  color: #f7f7f7;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0px; /* Stay at the top */
+    left: 0px;
+    background-color: #D7D9CE;
+    background-image: url("../images/papyrus.jpg");
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links and the dropdown button*/
+.sidenav a, .dropdown-btn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1A1A1A;
+    display: block;
+    transition: 0.3s;
+    border: none; /*fara margini la buton => discret*/
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-btn{
+  width:100%;
+}
+
+#openButton{
+    transform: rotate(90deg);
+    position: fixed;
+    top: 35px;
+    left: -7px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: #1A1A1A;
+}
+
+/*sa nu mai coloreze in negru backgroundColor la butonul x */
+/* .sidenav .closebtn:hover{
+  background-color: #FBDE73; #D7D9CE;
+} */
+
+/* Add an active class to the active dropdown button */
+.active{
+  background-color: #1A1A1A;
+  color: #f1f1f1;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  /* background-color: linear-gradient(to bottom, #FBDE73 0%, #ECE4B7 100%);//#D7D9CE; //#1A1A1A; */
+  padding-left: 8px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+span {
+  color: #D7D9CE;
+  display: inline-block;
+}
+
+footer {
+  color:#ddd;
+  background-color: #282E34;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+
+.socialmediaicons {
+  padding: 5px;
+  /* font-size: 30px; nu mi-l ia in considerare, a trebuit sa scriu direct in html" */
+  width: 35px;
+  height: 35px;
+  border-radius: 30%;
+  text-align: center;
+  vertical-align: middle; //textul de langa se orienteaza fata de iconite le mijloc
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.socialmediaicons:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: linear-gradient(to top right, #ff0000 0%, #9900ff 100%);
+  color: white;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px; //marginile albe le scot comentatnd paddingul asta doar ca dupa nu mai ajung la buton si nu merge nici cu z-index
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

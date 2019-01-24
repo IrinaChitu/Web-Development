@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <link rel="stylesheet" href="css/biblioteca.css"/>
+    <script src="js/biblioteca.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <!-- de modificat procentaje pt poza de background -->
+
+        <!-- <nav id = "navbar">
+          <a href="#addBookHere">Add a Book</a>
+          <a href="http://localhost:3000/bibliotecaAutori.html">Add an Author</a>
+        </nav> -->
+
+
+        <div class="topnav">
+          <a href="http://localhost:3000/bibliotecaCarti.html">Add a Book</a>
+          <a class="active" href="#addAuthorHere">Add an Author</a>
+          <!-- <div class="login-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Username" name="username">
+              <input type="text" placeholder="Password" name="psw">
+              <button  id="Login" type="submit">Login</button>
+            </form>
+          </div> -->
+        </div>
+
+
+        <div id="content">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:18%;">NAME</th>
+                <th style="width:40%;">BIOGRAPHY</th>
+                <th style="width:30%;">BOOKS</th>
+
+                <th>ADMIN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(el, id) in authors">
+                <td>{{el.Name}}</td>
+                <td>{{el.Biography}}</td>
+                <td>{{el.Boooks}}</td>
+                <td>
+                  <button v-on:click="editAuthor(id)">Edit</button>
+                  <button v-on:click="removAuthor(id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <a id="addAuthorHere"></a>
+          <form id="adauga"><fieldset>
+            <legend>ADD ANOTHER AUTHOR:</legend>
+            <label>Name:<input v-model="inpAuthors.Name"></label></br>
+            <label>Biography:<textarea v-model="inpAuthors.Biography" placeholder="Resize me if you need"></textarea></label></br>
+            <label>Books:<textarea v-model="inpAuthors.Boooks" placeholder="Resize me if you need"></textarea></label></br>
+            <button v-on:click="commitAuthor">{{(editIdAuthors===null)?"ADD":"EDIT"}}</button>
+          </fieldset></form>
+        </div>
+    </div>
+
+  </body>
+</html>

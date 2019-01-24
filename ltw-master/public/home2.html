@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="OnlineLibrary" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet Book Database">
+
+
+    <link rel="stylesheet" href="css/home2.css"/>
+    <script type="text/javascript" src="js/home2.js"> </script>
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+<body>
+
+  <!-- SideNav -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="closeButton">&times;</a>
+      <!--trebuie sa adaug linkuri  -->
+      <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#about"><i class="fa fa-fw fa-pencil"></i>About</a>
+      <button class="dropdown-btn"><i class="fa fa-fw fa-book"></i>Library
+            <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="http://localhost:3000/bibliotecaUser.html">Explore</a>
+        <a href="#">Search</a>
+      </div>
+      <a href="#dateDeContact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+      <a href="http://localhost:3000/bibliotecaCarti.html"><i class="fa fa-fw fa-wrench"></i>Edit</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span id="openButton">Menu</span>
+    <a id="returnUp"></a>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+
+      <!-- Scroll frumi -->
+      <div class="bgimg-1">
+        <div class="caption">
+        <span class="border">Welcome. Enter as guests, leave as friends.</span>
+        </div>
+      </div>
+
+      <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <a id="about"></a>
+        <h3 style="text-align:center;">IBDb</h3>
+        <p>The first platform of its kind, IBDb is an online database of books.
+          We invite you to explore, to find books similar to the ones you love or to try no ones based on previous feedback from other users.
+          Moreover, we ecnourage you to express your thoughts about the novels you have read. You may also note favourite quotes or passages you have enjoyed.
+        </p>
+      </div>
+
+      <div class="bgimg-2">
+        <div class="caption">
+        <span class="border">KNOWLEDGE</span>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p><i>"There is no friend as loyal as a book."</i></p>
+        </div>
+      </div>
+
+      <div class="bgimg-3">
+        <div class="caption">
+        <span class="border">VOCABULARY EXPANSION</span>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p><i>"Will I have to use a dictionary to read your book?" asked Mrs. Dodypol. "It depends," says I, "how much you used the dictionary before you read it"</i></p>
+        </div>
+      </div>
+
+      <div class="bgimg-1">
+        <div class="caption">
+        <span class="border"><a href="#returnUp" style="text-decoration: none; color: #fff;">Go up</a></span>
+        </div>
+      </div>
+
+
+      <footer>
+        <a id="dateDeContact"></a>
+        For further information, do not hesitate to contact us on:
+        <!-- Add font awesome icons -->
+        <a href="https://www.facebook.com/irina.chitu" title="Follow IBDb on Facebook" class="socialmediaicons fa fa-facebook" style="font-size:37px; text-decoration: none;"></a>
+        <a href="https://www.instagram.com/chitu.irina/?hl=en" title="Follow IBDb on Instagram" class="socialmediaicons fa fa-instagram" style="font-size:37px; text-decoration: none;"></a>
+      </footer>
+    </div>  <!-- inchid main -->
+
+  </body>
+</html>
