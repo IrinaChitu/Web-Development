@@ -7,6 +7,10 @@ Pentru instalare se poate downloada zip cu proiectul sau clona via git.
 
 Apoi trebuie instalate dependintele
 
+Command Prompt: 
+
+cd ...\ltw-master
+
 npm install
 
 # Rulare
